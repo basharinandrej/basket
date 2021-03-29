@@ -1,5 +1,8 @@
 <template>
   <div id="app" class="basket">
+
+    <Header />
+
     <div class="basket__container container">
 
 
@@ -23,6 +26,7 @@
 import Breadcrumbs from "@/UI/Breadcrumbs/Breadcrumbs";
 import Main from "@/components/Main/Main";
 import Aside from "@/components/Aside/Aside";
+import Header from "@/components/Header/Header";
 
 export default {
   name: 'App',
@@ -31,7 +35,7 @@ export default {
       breadcrumbs: [{ page: 'Главная', href: '#1' }, { page: 'Корзина', href: '#2'}],
     }
   },
-  components: {Aside, Main, Breadcrumbs},
+  components: {Header, Aside, Main, Breadcrumbs},
   methods: {
     onClick() {
       alert('1')
@@ -60,6 +64,8 @@ h1, h2, h3, h4, h5, h6, p, span, ul
   padding: 0
 
 .basket
+  .header
+    margin-bottom: 63px
   &__wrapper
     display: flex
   .main
