@@ -50,7 +50,8 @@ export default {
   padding: 26px 25px
   cursor: pointer
   align-items: center
-
+  &__input
+    display: none
 
 
 
@@ -76,21 +77,5 @@ export default {
     font-size: 14px
     line-height: 150%
     color: #797B86
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </style>
