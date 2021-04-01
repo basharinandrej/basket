@@ -1,6 +1,6 @@
 <template>
   <li class="list-product__item">
-    <img :src="{imageUrl}" alt="avatar_product" class="list-product__img">
+    <img :src="imageUrl" alt="avatar_product" class="list-product__img">
 
     <div class="list-product__description-product description-product">
       <h3 class="description-product__title">{{name}}</h3>
@@ -9,13 +9,20 @@
     </div>
 
     <div class="list-product__wrapper">
-      <ButtonGroup />
-      <p class="list-product__price-one" v-show="priceForOne"> {{ price }} ₽/шт.  </p>
+      <ButtonGroup 
+        :incrementCounter="onClickIncrementCounter"
+        :decrementCounter="onClickDecrementCounter"
+        :id="id"
+      />
+      <p class="list-product__price-one" v-show="totalPrice - price >= price"> {{ price }} ₽/шт.  </p>
     </div>
 
-    <p class="list-product__price"> {{price}} ₽ </p>
+    <p class="list-product__price"> {{totalPrice}} ₽ </p>
 
-    <ButtonClose />
+    <ButtonClose 
+      :onClick="removeOneProduct"
+      :id="id"
+    />
   </li>
 </template>
 
@@ -27,11 +34,21 @@ import ButtonClose from '@/UI/command/ButtonClose'
 
 export default {
   name: "ListProductsItem",
-  props: ['imageUrl', 'name', 'description', 'price', 'vendor_code'],
+  props: ['imageUrl', 'name', 'description', 'price', 'vendor_code', 'id', 'totalPrice'],
   components: {ButtonGroup, ButtonClose},
-  data() {
-    return {
-      priceForOne: true
+  methods: {
+    removeOneProduct(id) {
+      this.$store.commit('removeIdProduct', id)
+      // TODO вернуть проверку
+      // window.confirm(`Вы действительно хотите удалить ${this.name} из корзины ?`) 
+      //   ? 
+      //   : null
+    },
+    onClickIncrementCounter(id) {
+      this.$store.commit('incrementPrizeCurrentProduct', id)
+    },
+    onClickDecrementCounter(id) {
+      this.$store.commit('decrementPrizeCurrentProduct', id)
     }
   }
 }
@@ -55,6 +72,8 @@ export default {
     position: relative
   &__img
     margin-right: 31px
+    width: 72px
+    height: 72px
   &__description-product
     margin-right: 79px
   .button-close

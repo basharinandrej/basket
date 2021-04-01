@@ -11,10 +11,10 @@
             Ваша корзина
           </p>
           <p class="header-total__counter-product">
-            3 товара
+            {{getTotalProductsBasket}} товара
           </p>
           <p class="header-total__price">
-            50 576 ₽
+            xxx ₽
           </p>
         </div>
       </div>
@@ -26,7 +26,12 @@
 <script>
 
 export default {
-
+  name: 'Header',
+  computed: {
+    getTotalProductsBasket() {
+      return this.$store.state.products.items.length
+    }
+  }
 }
 
 </script>

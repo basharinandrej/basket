@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul
     margin-bottom: 63px
   &__wrapper
     display: flex
+    align-items: flex-start
   .main
     margin-right: 61px
   .aside

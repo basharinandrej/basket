@@ -9,12 +9,12 @@
     <ul class="aside__aside-list aside-list">
       <li class="aside-list__item">
         <p class="aside-list__name">Сумма заказа</p>
-        <p class="aside-list__result">50 576 ₽</p>
+        <p class="aside-list__result">{{getTotalPriseBasket}} ₽</p>
       </li>
 
       <li class="aside-list__item">
         <p class="aside-list__name">Количество</p>
-        <p class="aside-list__result">4 шт</p>
+        <p class="aside-list__result">{{getTotalProductsBasket}} шт</p>
       </li>
 
       <li class="aside-list__item">
@@ -28,7 +28,8 @@
     <div class="aside__wrapper">
       <p class="aside__paragraph">Стоимость товаров</p>
 
-      <strong class="aside__total-price">50 576 ₽</strong>
+<!-- 50 576  -->
+      <strong class="aside__total-price">xxx ₽</strong>
     </div>
     <div class="aside__box-button">
       <Button
@@ -67,6 +68,14 @@ export default {
       alert('1')
     }
   },
+  computed: {
+    getTotalProductsBasket() {
+      return this.$store.state.products.items.length
+    },
+    getTotalPriseBasket() {
+      return this.$store.getters.getTotalPriceAllProducts
+    }
+  }
 }
 </script>
 

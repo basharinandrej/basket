@@ -1,14 +1,18 @@
 <template>
   <ul class="list-product">
     <ListProductsItem
-      v-for="item in products"
+      v-for="item in getProducts"
         :key="item.id"
         :imageUrl="item.imageUrl"
         :name="item.name"
         :description="item.description"
         :price="item.price"
         :vendor_code="item.vendor_code"
+        :totalPrice="item.totalPrice"
+        :id="item.id"
     />
+
+    <p v-if="getTotalProductsBasket === 0">Нет товаров в корзине</p>
   </ul>
 </template>
 
@@ -20,13 +24,13 @@ import ListProductsItem from '@/components/ListProducts/ListProductsItem/ListPro
 export default {
   name: 'ListProduct',
   components: {ListProductsItem},
-  data() {
-    return {
-      products: []
+  computed: {
+    getProducts() {
+      return this.$store.state.products.items
+    },
+    getTotalProductsBasket() {
+      return this.$store.state.products.items.length
     }
-  },
-  async mounted() {
-    this.products = await this.$store.state.products.items
   }
 }
 </script>

@@ -1,11 +1,11 @@
 <template>
 
   <div class="button-group">
-    <button class="button-group__button button-group__button--left" @click="decrementCounter"/>
+    <button class="button-group__button button-group__button--left" @click="onClickDecrementCounter"/>
     <span class="button-group__counter">
       {{ counter }}
     </span>
-    <button class="button-group__button button-group__button--right" @click="incrementCounter"/>
+    <button class="button-group__button button-group__button--right" @click="onClickIncrementCounter"/>
   </div>
 
 </template>
@@ -14,17 +14,20 @@
 
 export default {
   name: 'ButtonGroup',
+  props: ['incrementCounter', 'id', 'decrementCounter'],
   data() {
     return {
       counter: 1
     }
   },
   methods: {
-    incrementCounter() {
+    onClickIncrementCounter() {
+      this.incrementCounter(this.id)
       return this.counter++
     },
-    decrementCounter() {
-      return this.counter <= 0 ? 0 : this.counter--
+    onClickDecrementCounter() {
+      this.decrementCounter(this.id)
+      return this.counter <= 1 ? 1 : this.counter--
     }
   }
 }

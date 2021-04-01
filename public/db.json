@@ -6,7 +6,9 @@
       "name": "Вытяжное устройство G2H",
       "description": "12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия",
       "price": 12644,
-      "vendor_code": "Артикул: G2H1065"
+      "vendor_code": "Артикул: G2H1065",
+      "counterCurrentProduct": 1,
+      "totalPrice": 12644
     },
     {
       "id": 1,
@@ -14,7 +16,9 @@
       "name": "Вытяжное устройство BXC",
       "description": "12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия",
       "price": 25288,
-      "vendor_code": "Артикул: G2H1065"
+      "vendor_code": "Артикул: G2H1065",
+      "counterCurrentProduct": 1,
+      "totalPrice": 25288
     },
     {
       "id": 2,
@@ -22,7 +26,9 @@
       "name": "Вытяжное устройство GHN",
       "description": "12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия",
       "price": 25288,
-      "vendor_code": "Артикул: G2H1065"
+      "vendor_code": "Артикул: G2H1065",
+      "counterCurrentProduct": 1,
+      "totalPrice": 25288
     }
   ]
 }

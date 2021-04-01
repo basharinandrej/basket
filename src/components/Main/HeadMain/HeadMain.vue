@@ -5,22 +5,34 @@
     </h1>
 
     <p class="main-head__counter">
-      4 товрар
+      {{ getTotalProductsBasket }} товара
     </p>
 
-    <Link>
+    <MainLink
+      :onClick="removeAllProductsBasket"
+    >
       Очистить корзину
-    </Link>
+    </MainLink>
   </div>
 </template>
 
 <script>
 
-import Link from '@/UI/command/Link'
+import MainLink from '@/UI/command/MainLink'
 
 export default {
   name: 'HeadMain',
-  components: {Link}
+  components: {MainLink},
+  computed: {
+    getTotalProductsBasket() {
+      return this.$store.state.products.items.length
+    }
+  },
+  methods: {
+    removeAllProductsBasket() {
+      this.$store.commit('removeAllProduct')
+    }
+  }
 }
 
 </script>

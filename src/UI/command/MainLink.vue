@@ -7,12 +7,8 @@
 <script>
 
 export default {
-  name: 'Link',
-  methods: {
-    onClick() {
-      alert('Link')
-    }
-  }
+  name: 'MainLink',
+  props: ['onClick']
 }
 </script>
 

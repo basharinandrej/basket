@@ -1,6 +1,6 @@
 <template>
 
-  <button class="button-close" @click="onClick">&times;</button>
+  <button class="button-close" @click="() => onClick(id)">&times;</button>
 
 </template>
 
@@ -8,11 +8,7 @@
 
 export default {
   name: 'ButtonClose',
-  methods: {
-    onClick() {
-      alert('btn close')
-    }
-  }
+  props: ['onClick', 'id']
 }
 
 </script>
