@@ -1,19 +1,19 @@
 <template>
   <li class="list-product__item">
-    <img src="" alt="avatar_product" class="list-product__img">
+    <img :src="{imageUrl}" alt="avatar_product" class="list-product__img">
 
     <div class="list-product__description-product description-product">
-      <h3 class="description-product__title">Вытяжное устройство G2H</h3>
-      <p class="description-product__paragraph">12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия</p>
-      <p class="description-product__signature">Артикул: G2H1065</p>
+      <h3 class="description-product__title">{{name}}</h3>
+      <p class="description-product__paragraph">{{description}}</p>
+      <p class="description-product__signature">Артикул: {{vendor_code}}</p>
     </div>
 
     <div class="list-product__wrapper">
       <ButtonGroup />
-      <p class="list-product__price-one" v-show="priceForOne"> 12 644 ₽/шт.  </p>
+      <p class="list-product__price-one" v-show="priceForOne"> {{ price }} ₽/шт.  </p>
     </div>
 
-    <p class="list-product__price"> 12 644 ₽ </p>
+    <p class="list-product__price"> {{price}} ₽ </p>
 
     <ButtonClose />
   </li>
@@ -27,6 +27,7 @@ import ButtonClose from '@/UI/command/ButtonClose'
 
 export default {
   name: "ListProductsItem",
+  props: ['imageUrl', 'name', 'description', 'price', 'vendor_code'],
   components: {ButtonGroup, ButtonClose},
   data() {
     return {

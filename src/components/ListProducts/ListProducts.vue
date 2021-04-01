@@ -1,17 +1,33 @@
 <template>
   <ul class="list-product">
-    <ListProductsItem />
-    <ListProductsItem />
+    <ListProductsItem
+      v-for="item in products"
+        :key="item.id"
+        :imageUrl="item.imageUrl"
+        :name="item.name"
+        :description="item.description"
+        :price="item.price"
+        :vendor_code="item.vendor_code"
+    />
   </ul>
 </template>
 
 
 <script>
+
 import ListProductsItem from '@/components/ListProducts/ListProductsItem/ListProductsItem'
 
-
 export default {
-  components: {ListProductsItem}
+  name: 'ListProduct',
+  components: {ListProductsItem},
+  data() {
+    return {
+      products: []
+    }
+  },
+  async mounted() {
+    this.products = await this.$store.state.products.items
+  }
 }
 </script>
 

@@ -61,7 +61,12 @@ export default {
       typeButtonPrimary: 'primary',
       typeButtonGhost: 'ghost',
     }
-  }
+  },
+  methods: {
+    onClick() {
+      alert('1')
+    }
+  },
 }
 </script>
 

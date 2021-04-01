@@ -5,8 +5,6 @@
 
     <div class="basket__container container">
 
-
-
       <Breadcrumbs
         :breadcrumbs="breadcrumbs"
       />
@@ -36,10 +34,8 @@ export default {
     }
   },
   components: {Header, Aside, Main, Breadcrumbs},
-  methods: {
-    onClick() {
-      alert('1')
-    }
+  async mounted() {
+    await this.$store.dispatch('actionFetchProducts')
   }
 }
 
