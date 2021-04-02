@@ -1,6 +1,6 @@
 <template>
   <div class="main__main-head main-head">
-    <h1 class="main-head__title">
+    <h1 class="main-head__title title">
       Ваша корзина
     </h1>
 
@@ -47,10 +47,12 @@ export default {
 
     &__title
       margin-right: 22px
+    
 
     &__counter
       color: #797B86
       margin-right: auto
+      font-family: 'Lato', sans-serif
 
 @media screen and (max-width: 576px) 
   .main

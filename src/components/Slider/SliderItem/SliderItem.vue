@@ -1,11 +1,11 @@
 <template>
     <div class="sl-card">
-        <img    :src="imageUrl" 
+        <img    :src="setImageUrl" 
                 alt="avatar-card"
                 class="sl-card__img"
                 >
 
-        <h3 class="sl-card__title">{{name}}</h3>    
+        <h4 class="sl-card__title title">{{name}}</h4>    
         <p class="sl-card__paragraph">{{description}}</p>    
 
         <p class="sl-card__price-ru">{{minPriceRU}} ₽ - {{maxPriceRU}} ₽ </p>
@@ -45,6 +45,11 @@ export default {
         onClickHandler() {
             console.log('Slider')
         }
+    },
+     computed: {
+        setImageUrl() {
+            return require(`@/assets/products/${this.imageUrl}.png`)
+        }
     }
 }
 </script>
@@ -65,7 +70,7 @@ export default {
         display: block
         margin: 0 auto 5px auto
     &__title
-        font-family: Lato
+        font-family: Lato, sans-serif
         font-style: normal
         font-weight: bold
         font-size: 22px
@@ -73,7 +78,7 @@ export default {
         color: #1F2432
         margin-bottom: 10px
     &__paragraph
-        font-family: Lato
+        font-family: Lato, sans-serif
         font-style: normal
         font-weight: normal
         font-size: 14px
@@ -82,7 +87,7 @@ export default {
         flex-grow: 1
     &__price-ru
         margin-bottom: 3px
-        font-family: 'Roboto'
+        font-family: 'Roboto', sans-serif
         font-style: normal
         font-weight: 500
         font-size: 22px
@@ -91,6 +96,9 @@ export default {
         color: #1F2432
     &__price-eu
         margin-bottom: 20px
+        font-family: 'Lato', sans-serif
+    .main-btn
+        font-size: 16px
 
 @media screen and (max-width: 768px) 
     .list-product

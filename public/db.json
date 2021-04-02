@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 0,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.1", 
       "name": "Вытяжное устройство G2H",
       "description": "12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия",
       "price": 12644,
@@ -12,7 +12,7 @@
     },
     {
       "id": 1,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.2",
       "name": "Вытяжное устройство BXC",
       "description": "12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия",
       "price": 25288,
@@ -22,7 +22,7 @@
     },
     {
       "id": 2,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.3",
       "name": "Вытяжное устройство GHN",
       "description": "12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия",
       "price": 25288,
@@ -35,7 +35,7 @@
     {
     "id": 0,
     "name": "BXC",
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+    "imageUrl": "img_1.2",
     "description": "Вытяжное устройство для механической системы вентиляции",
     "minPriceRU": 6848,
     "maxPriceRU": 56584,
@@ -45,7 +45,7 @@
     {
       "id": 1,
       "name": "G2H",
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.1",
       "description": "Многофункциональное вытяжное устройство для естественной и гибридной вентиляции",
       "minPriceRU": 6848,
       "maxPriceRU": 56584,
@@ -55,7 +55,7 @@
     {
       "id": 2,
       "name": "GHN",
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.3",
       "description": "Вытяжное устройство с датчиком присутствия",
       "minPriceRU": 6848,
       "maxPriceRU": 56584,
@@ -65,7 +65,7 @@
     {
       "id": 3,
       "name": "TDA",
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.4",
       "description": "Вытяжное устройство с датчиком присутствия",
       "minPriceRU": 6848,
       "maxPriceRU": 56584,
@@ -75,7 +75,7 @@
     {
       "id": 4,
       "name": "G2H",
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.1",
       "description": "Многофункциональное вытяжное устройство для естественной и гибридной вентиляции",
       "minPriceRU": 6848,
       "maxPriceRU": 56584,
@@ -85,7 +85,7 @@
     {
       "id": 5,
       "name": "BXC",
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "imageUrl": "img_1.2",
       "description": "Вытяжное устройство для механической системы вентиляции",
       "minPriceRU": 6848,
       "maxPriceRU": 56584,

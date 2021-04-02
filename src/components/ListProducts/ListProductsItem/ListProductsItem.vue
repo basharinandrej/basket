@@ -1,9 +1,10 @@
 <template>
   <li class="list-product__item">
-    <img :src="imageUrl" alt="avatar_product" class="list-product__img">
+
+    <img :src="setImageUrl" alt="avatar_product" class="list-product__img">
 
     <div class="list-product__description-product description-product">
-      <h4 class="description-product__title">{{name}}</h4>
+      <h5 class="description-product__title title">{{name}}</h5>
       <p class="description-product__paragraph">{{description}}</p>
       <p class="description-product__signature">Артикул: {{vendor_code}}</p>
     </div>
@@ -52,6 +53,11 @@ export default {
     onClickDecrementCounter(id) {
       this.$store.commit('decrementPrizeCurrentProduct', id)
     }
+  },
+  computed: {
+    setImageUrl() {
+      return require(`@/assets/products/${this.imageUrl}.png`)
+    }
   }
 }
 
@@ -61,6 +67,11 @@ export default {
 <style lang="sass">
 
 .list-product
+  &__price
+    font-family: 'Lato', sans-serif
+    font-weight: bold
+  &__price-one
+    font-family: 'Lato', sans-serif
   &__wrapper
     display: flex
     flex-direction: column
@@ -85,7 +96,7 @@ export default {
 
 .description-product
   &__title
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 16px
@@ -94,7 +105,7 @@ export default {
     margin-bottom: 6px
 
   &__paragraph
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 12px
@@ -104,12 +115,16 @@ export default {
     margin-bottom: 7px
 
   &__signature
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
     line-height: 150%
     color: #797B86
 
+@media screen and (max-width: 768px) 
+  .list-product
+    &__item
+      padding: 29px 15px 23px 15px
 
 </style>

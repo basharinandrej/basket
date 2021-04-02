@@ -49,7 +49,6 @@ export default {
 
 *
   box-sizing: border-box
-  font-family: 'Lato', sans-serif
 
 body
   margin: 0
@@ -92,5 +91,35 @@ h1, h2, h3, h4, h5, h6, p, span, ul
       width: 100%
     .aside
       width: 100%
+
+//typo
+h1.title
+  font-size: 44px
+  font-family: 'Lato', sans-serif
+  @media screen and (max-width: 768px) 
+    font-size: 32px
+
+h2.title
+  font-size: 30px
+  @media screen and (max-width: 768px) 
+    font-size: 24px
+
+h3.title
+  font-size: 24px
+  font-family: 'Lato', sans-serif
+  @media screen and (max-width: 768px) 
+    font-size: 20px
+
+h4.title
+  font-size: 22px
+  @media screen and (max-width: 768px) 
+    font-size: 16px
+
+h5.title
+  font-size: 16px
+  font-family: 'Lato', sans-serif
+  @media screen and (max-width: 768px) 
+    font-size: 12px
+
 
 </style>

@@ -1,4 +1,5 @@
 import axios from "axios";
+import {baseUrl} from '@/helpers/baseUrl';
 
 const state = {
     items: [],
@@ -14,7 +15,7 @@ const actions = {
 
         try {
             const response = await axios
-                .get('http://localhost:8081/recentlyWatchedProducts')
+                .get(`${baseUrl}/recentlyWatchedProducts`)
 
             const products = await response.data
             commit('successFetchProductsRecently', {

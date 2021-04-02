@@ -14,7 +14,7 @@
       <div class="main-input__input-content input-content">
         <img src="../../assets/img/tools.png" class="input-content__img" alt="icon">
         <div class="input-content__wrapper">
-          <h5 class="input-content__title">
+          <h5 class="input-content__title title">
             Установка
           </h5>
           <p class="input-content__paragraph">
@@ -63,7 +63,7 @@ export default {
   &__main-head
     margin-bottom: 54px
   &__counter
-    font-family: 'Lato'
+    font-family: "Lato", sans-serif
     font-style: normal
     font-weight: normal
     font-size: 18px

@@ -23,7 +23,6 @@ export default {
   }
 }
 
-//TODO Подключить шрифт
 </script>
 
 <style lang="sass">

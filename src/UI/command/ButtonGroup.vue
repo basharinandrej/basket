@@ -43,7 +43,7 @@ export default {
     border: none
     cursor: pointer
     padding: 6px
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -58,7 +58,7 @@ export default {
     border: none
     cursor: pointer
     padding: 6px
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px

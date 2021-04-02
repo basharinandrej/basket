@@ -22,6 +22,7 @@ export default {
   text-align: right
   text-decoration-line: underline
   color: #797B86
+  font-family: 'Lato', sans-serif
 
 
 

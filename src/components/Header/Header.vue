@@ -61,7 +61,7 @@ export default {
     margin-right: 10px
 
   &__paragraph
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -69,7 +69,7 @@ export default {
     color: #1F2432
 
   &__counter-product
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 12px
@@ -77,7 +77,7 @@ export default {
     color: #797B86
 
   &__price
-    font-family: 'Lato'
+    font-family: 'Lato', sans-serif
     font-style: normal
     font-weight: normal
     font-size: 12px

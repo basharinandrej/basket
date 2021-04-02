@@ -2,9 +2,9 @@
 
   <aside class="aside">
 
-    <h2 class="aside__title">
+    <h3 class="aside__title title">
       Итого
-    </h2>
+    </h3>
 
     <ul class="aside__aside-list aside-list">
       <li class="aside-list__item">
@@ -32,15 +32,15 @@
     </div>
     <div class="aside__box-button">
       <Button
-          :onClick="this.onClick"
+          :onClick="this.onSubmitHandler"
           :typeButton="typeButtonPrimary"
       >
         Оформить заказ
       </Button>
 
       <Button
-          :onClick="this.onClick"
           :typeButton="typeButtonGhost"
+          :onClick="onClick"
       >
         Купить в 1 клик
       </Button>
@@ -63,8 +63,20 @@ export default {
     }
   },
   methods: {
+    onSubmitHandler() {
+      const products = this.$store.state.products.items
+      const isInstallation = this.$store.state.products.isInstallation
+      const totalPrice = this.$store.getters.getTotalPriceAllProducts
+      
+      const data = {
+        products: [...products],
+        isInstallation,
+        totalPrice
+      }
+      products.length ? console.log(data) : alert('Корзина пуста')
+    },
     onClick() {
-      alert('1')
+      console.log('Купить в 1 клик')
     }
   },
   computed: {
@@ -87,7 +99,13 @@ export default {
   padding: 35px 30px
   background: #F6F8FA
   border-radius: 5px
-
+  &__total-price
+    font-size: 26px
+    font-family: 'Lato', sans-serif
+    @media screen and (max-width: 576px) 
+      font-size: 20px
+  &__paragraph
+    font-family: 'Lato', sans-serif
   &__wrapper
     display: flex
     justify-content: space-between
@@ -99,6 +117,10 @@ export default {
     margin-bottom: 16px
 
   &-list
+    &__name
+      font-family: 'Lato', sans-serif
+    &__result
+      font-family: 'Lato', sans-serif
     &__item
       display: flex
       list-style: none

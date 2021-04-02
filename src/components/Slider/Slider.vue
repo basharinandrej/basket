@@ -114,7 +114,7 @@
     top: -80px
     width: 100px
     display: flex
-    font-family: Lato
+    font-family: Lato, sans-serif
     font-style: normal
     font-weight: 500
     line-height: 150%

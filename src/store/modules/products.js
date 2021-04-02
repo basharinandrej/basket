@@ -1,4 +1,5 @@
 import axios from "axios";
+import {baseUrl} from '@/helpers/baseUrl';
 
 const state = {
     items: [],
@@ -15,7 +16,7 @@ const actions = {
 
         try {
             const response = await axios
-                .get('http://localhost:8081/products')
+                .get(`${baseUrl}/products`)
 
             const products = await response.data
             commit('successFetchProducts', {

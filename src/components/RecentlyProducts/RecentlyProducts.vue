@@ -1,7 +1,7 @@
 <template>
 
 <section class="basket__section-recently section-recently">
-    <h2 class="section-recently__title">Просмотренные товары</h2>
+    <h2 class="section-recently__title title">Просмотренные товары</h2>
     <Slider />
 </section>
 
@@ -26,6 +26,7 @@ export default {
 .section-recently
     &__title
         margin-bottom: 60px 
+        font-family: 'Lato', sans-serif
 
 @media screen and (max-width: 576px) 
     .basket
