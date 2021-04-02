@@ -15,9 +15,13 @@ const actions = {
 
         try {
             const response = await axios
-                .get(`${baseUrl}/recentlyWatchedProducts`)
+                .get(`${baseUrl}/recentlyWatchedProducts.json`)
 
             const products = await response.data
+
+            console.log('products', products)
+
+        
             commit('successFetchProductsRecently', {
                 items: products,
                 isLoading: false

@@ -67,11 +67,13 @@ export default {
       const products = this.$store.state.products.items
       const isInstallation = this.$store.state.products.isInstallation
       const totalPrice = this.$store.getters.getTotalPriceAllProducts
+      const totalProduct = this.$store.getters.getTotalProducts
       
       const data = {
         products: [...products],
         isInstallation,
-        totalPrice
+        totalPrice,
+        totalProduct
       }
       products.length ? console.log(data) : alert('Корзина пуста')
     },
@@ -81,14 +83,14 @@ export default {
   },
   computed: {
     getTotalProductsBasket() {
-      return this.$store.state.products.items.length
+      return this.$store.getters.getTotalProducts
     },
     getTotalPriseBasket() {
       return this.$store.getters.getTotalPriceAllProducts
     },
     getInstallationServices() {
       return this.$store.state.products.isInstallation ? 'Да' : 'Нет'
-    }
+    },
   }
 }
 </script>

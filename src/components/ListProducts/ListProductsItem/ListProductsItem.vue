@@ -40,18 +40,18 @@ export default {
   methods: {
     removeOneProduct(id) {
       this.$store.commit('removeIdProduct', id)
-      // TODO вернуть проверку
-      // window.confirm(`Вы действительно хотите удалить ${this.name} из корзины ?`) 
-      //   ? 
-      //   : null
-      !this.$store.state.products.items.length 
-        && this.$store.commit('setDefaultInstalitionSerices')
+      window.confirm(`Вы действительно хотите удалить ${this.name} из корзины ?`) 
+        ?  !this.$store.state.products.items.length 
+              && this.$store.commit('setDefaultInstalitionSerices')
+        : null
     },
     onClickIncrementCounter(id) {
       this.$store.commit('incrementPrizeCurrentProduct', id)
+      this.$store.commit('incrementCounterCurrentProduct', id)
     },
     onClickDecrementCounter(id) {
       this.$store.commit('decrementPrizeCurrentProduct', id)
+      this.$store.commit('decrementCounterCurrentProduct', id)
     }
   },
   computed: {

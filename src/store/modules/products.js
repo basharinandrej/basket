@@ -16,7 +16,7 @@ const actions = {
 
         try {
             const response = await axios
-                .get(`${baseUrl}/products`)
+                .get(`${baseUrl}/products.json`)
 
             const products = await response.data
             commit('successFetchProducts', {
@@ -82,6 +82,38 @@ const mutations = {
             }
         })
     },
+    incrementCounterCurrentProduct(state, payload) {
+        state.items = state.items.map(el => {
+            switch(el.id) {
+                case payload:
+                   return {
+                        ...el,
+                        counterCurrentProduct: el.counterCurrentProduct + 1
+                   }
+                default:
+                    return {
+                        ...el
+                    }
+            }
+        })
+    },
+    decrementCounterCurrentProduct(state, payload) {
+        state.items = state.items.map(el => {
+            switch(el.id) {
+                case payload:
+                   return {
+                        ...el,
+                        counterCurrentProduct: el.counterCurrentProduct > 1 
+                            ? el.counterCurrentProduct - 1
+                            : el.counterCurrentProduct
+                   }
+                default:
+                    return {
+                        ...el
+                    }
+            }
+        })
+    },
     toggleInstallationServices(state, payload) {
         state.isInstallation = payload
     },
@@ -94,6 +126,11 @@ const getters = {
     getTotalPriceAllProducts(state) {
         return state.items.reduce((total, el) => {
             return total + el.totalPrice
+        }, 0)
+    },
+    getTotalProducts(state) {
+        return state.items.reduce((total, el) => {
+            return total + el.counterCurrentProduct
         }, 0)
     }
 }
