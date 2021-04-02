@@ -15,7 +15,11 @@ const actions = {
 
         try {
             const response = await axios
-                .get(`${baseUrl}/recentlyWatchedProducts.json`)
+                .get(`${baseUrl}/recentlyWatchedProducts`, {
+                    headers: {
+                        'Access-Control-Allow-Origin' : '*',
+                    }
+                })
 
             const products = await response.data
 

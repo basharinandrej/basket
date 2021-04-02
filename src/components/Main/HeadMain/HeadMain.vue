@@ -25,7 +25,7 @@ export default {
   components: {MainLink},
   computed: {
     getTotalProductsBasket() {
-      return this.$store.state.products.items.length
+      return this.$store.getters.getTotalProducts
     }
   },
   methods: {

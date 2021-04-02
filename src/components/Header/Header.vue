@@ -29,7 +29,7 @@ export default {
   name: 'Header',
   computed: {
     getTotalProductsBasket() {
-      return this.$store.state.products.items.length
+      return this.$store.getters.getTotalProducts
     },
     getTotalPriseBasket() {
       return this.$store.getters.getTotalPriceAllProducts

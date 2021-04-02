@@ -16,7 +16,11 @@ const actions = {
 
         try {
             const response = await axios
-                .get(`${baseUrl}/products.json`)
+                .get(`${baseUrl}/products`,  {
+                    headers: {
+                        'Access-Control-Allow-Origin' : '*',
+                    }
+                })
 
             const products = await response.data
             commit('successFetchProducts', {
