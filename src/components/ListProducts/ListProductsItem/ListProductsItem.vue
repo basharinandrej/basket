@@ -3,7 +3,7 @@
     <img :src="imageUrl" alt="avatar_product" class="list-product__img">
 
     <div class="list-product__description-product description-product">
-      <h3 class="description-product__title">{{name}}</h3>
+      <h4 class="description-product__title">{{name}}</h4>
       <p class="description-product__paragraph">{{description}}</p>
       <p class="description-product__signature">Артикул: {{vendor_code}}</p>
     </div>
@@ -43,6 +43,8 @@ export default {
       // window.confirm(`Вы действительно хотите удалить ${this.name} из корзины ?`) 
       //   ? 
       //   : null
+      !this.$store.state.products.items.length 
+        && this.$store.commit('setDefaultInstalitionSerices')
     },
     onClickIncrementCounter(id) {
       this.$store.commit('incrementPrizeCurrentProduct', id)

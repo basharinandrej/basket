@@ -8,6 +8,8 @@
     <Input
         :typeInput="typeInputCheckbox"
         :typeControl="typeControl"
+        @onChange="isChecked"
+        v-if="getTotalProductsBasket"
     >
       <div class="main-input__input-content input-content">
         <img src="../../assets/img/tools.png" class="input-content__img" alt="icon">
@@ -39,6 +41,18 @@ export default {
       typeControl: 'big'
     }
   },
+  computed: {
+    getTotalProductsBasket() {
+      return this.$store.state.products.items.length
+    }
+  },
+  methods: {
+    isChecked(e) {
+      let isChecked = e.target.checked
+      
+      this.$store.commit('toggleInstallationServices', isChecked)
+    }
+  }
 }
 
 </script>

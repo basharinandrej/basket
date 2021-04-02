@@ -30,5 +30,67 @@
       "counterCurrentProduct": 1,
       "totalPrice": 25288
     }
+  ],
+  "recentlyWatchedProducts": [
+    {
+    "id": 0,
+    "name": "BXC",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+    "description": "Вытяжное устройство для механической системы вентиляции",
+    "minPriceRU": 6848,
+    "maxPriceRU": 56584,
+    "minPriceEU": 77.60,
+    "maxPriceEU": 643.86
+    },
+    {
+      "id": 1,
+      "name": "G2H",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "description": "Многофункциональное вытяжное устройство для естественной и гибридной вентиляции",
+      "minPriceRU": 6848,
+      "maxPriceRU": 56584,
+      "minPriceEU": 77.60,
+      "maxPriceEU": 643.86
+    },
+    {
+      "id": 2,
+      "name": "GHN",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "description": "Вытяжное устройство с датчиком присутствия",
+      "minPriceRU": 6848,
+      "maxPriceRU": 56584,
+      "minPriceEU": 77.60,
+      "maxPriceEU": 643.86
+    },
+    {
+      "id": 3,
+      "name": "TDA",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "description": "Вытяжное устройство с датчиком присутствия",
+      "minPriceRU": 6848,
+      "maxPriceRU": 56584,
+      "minPriceEU": 77.60,
+      "maxPriceEU": 643.86
+    },
+    {
+      "id": 4,
+      "name": "G2H",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "description": "Многофункциональное вытяжное устройство для естественной и гибридной вентиляции",
+      "minPriceRU": 6848,
+      "maxPriceRU": 56584,
+      "minPriceEU": 77.60,
+      "maxPriceEU": 643.86
+    },
+    {
+      "id": 5,
+      "name": "BXC",
+      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+      "description": "Вытяжное устройство для механической системы вентиляции",
+      "minPriceRU": 6848,
+      "maxPriceRU": 56584,
+      "minPriceEU": 77.60,
+      "maxPriceEU": 643.86
+    }
   ]
 }

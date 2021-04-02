@@ -14,7 +14,7 @@
             {{getTotalProductsBasket}} товара
           </p>
           <p class="header-total__price">
-            xxx ₽
+            {{getTotalPriseBasket}} ₽
           </p>
         </div>
       </div>
@@ -30,6 +30,9 @@ export default {
   computed: {
     getTotalProductsBasket() {
       return this.$store.state.products.items.length
+    },
+    getTotalPriseBasket() {
+      return this.$store.getters.getTotalPriceAllProducts
     }
   }
 }

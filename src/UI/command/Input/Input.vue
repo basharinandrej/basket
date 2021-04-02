@@ -5,9 +5,9 @@
     <input
         :id="setIdControl"
         :type="typeInput"
+        @change="e => onChange(e)"
         class="main-input__input"
     >
-
     <Checkbox v-if="typeInput === 'checkbox'" />
 
     <slot />
@@ -35,6 +35,11 @@ export default {
 
       cls.push(this.typeControl ? `main-input--${this.typeControl}` : '')
       return cls
+    }
+  },
+  methods: {
+    onChange(e) {
+      this.$emit('onChange', e)
     }
   }
 }

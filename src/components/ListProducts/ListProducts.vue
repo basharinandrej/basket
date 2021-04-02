@@ -12,7 +12,7 @@
         :id="item.id"
     />
 
-    <p v-if="getTotalProductsBasket === 0">Нет товаров в корзине</p>
+    <li class="list-product__stub" v-if="getTotalProductsBasket === 0">Нет товаров в корзине</li>
   </ul>
 </template>
 
@@ -38,6 +38,10 @@ export default {
 <style lang="sass">
 
 .list-product
+  &__stub
+    margin-bottom: 52px
+    display: block
+    list-style: none
   &__item
     border-bottom: 1px solid #C4C4C4
   &__item:last-child

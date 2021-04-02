@@ -19,7 +19,7 @@
 
       <li class="aside-list__item">
         <p class="aside-list__name">Установка</p>
-        <p class="aside-list__result">Нет</p>
+        <p class="aside-list__result">{{ getInstallationServices}}</p>
       </li>
     </ul>
 
@@ -28,8 +28,7 @@
     <div class="aside__wrapper">
       <p class="aside__paragraph">Стоимость товаров</p>
 
-<!-- 50 576  -->
-      <strong class="aside__total-price">xxx ₽</strong>
+      <strong class="aside__total-price">{{getTotalPriseBasket}} ₽</strong>
     </div>
     <div class="aside__box-button">
       <Button
@@ -74,6 +73,9 @@ export default {
     },
     getTotalPriseBasket() {
       return this.$store.getters.getTotalPriceAllProducts
+    },
+    getInstallationServices() {
+      return this.$store.state.products.isInstallation ? 'Да' : 'Нет'
     }
   }
 }

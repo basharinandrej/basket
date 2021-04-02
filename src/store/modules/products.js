@@ -3,7 +3,8 @@ import axios from "axios";
 const state = {
     items: [],
     isLoading: false,
-    errorMessage: ''
+    errorMessage: '',
+    isInstallation: false
 }
 
 const actions = {
@@ -79,6 +80,12 @@ const mutations = {
                     }
             }
         })
+    },
+    toggleInstallationServices(state, payload) {
+        state.isInstallation = payload
+    },
+    setDefaultInstalitionSerices(state) {
+        state.isInstallation = false
     }
 }
 

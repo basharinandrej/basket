@@ -31,6 +31,7 @@ export default {
   methods: {
     removeAllProductsBasket() {
       this.$store.commit('removeAllProduct')
+      this.$store.commit('setDefaultInstalitionSerices')
     }
   }
 }
@@ -51,5 +52,10 @@ export default {
       color: #797B86
       margin-right: auto
 
+@media screen and (max-width: 576px) 
+  .main
+    &-head 
+      display: flex
+      flex-direction: column
 
 </style>
